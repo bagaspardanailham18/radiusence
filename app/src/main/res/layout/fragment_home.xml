@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/radiusence_logo_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_attendance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:textColor="#4D17E2"
+            android:letterSpacing="-0.05"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/layout_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_attendance">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_profile_card">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tv_img_user"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/bagas"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:text="Bagas Pardana"
+                    android:textColor="?attr/colorOnSecondary"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tv_img_user"
+                    app:layout_constraintTop_toTopOf="@+id/tv_img_user" />
+
+                <TextView
+                    android:id="@+id/tv_nim"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppinsmedium"
+                    tools:text="A2.1800029"
+                    android:textColor="@color/purpleTextSubtitle"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+                <RelativeLayout
+                    android:id="@+id/info_jurusan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:background="#2D00AA"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_nim">
+
+                    <ImageView
+                        android:id="@+id/icon_jurusan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toStartOf="@+id/tv_major"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_baseline_school_24" />
+
+                    <TextView
+                        android:id="@+id/tv_major"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/poppinsmedium"
+                        android:text="Teknik Informatika"
+                        android:textColor="@color/purpleTextSubtitle" />
+
+                </RelativeLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/main_menu"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:weightSum="4"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/layout_profile">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/class_menu"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical" >-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:layout_width="65dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    app:cardCornerRadius="100dp"-->
+<!--                    app:cardElevation="1dp"-->
+<!--                    app:cardBackgroundColor="@color/lightBlue">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="35dp"-->
+<!--                        android:layout_height="35dp"-->
+<!--                        android:src="@drawable/ic_class_white"-->
+<!--                        android:layout_gravity="center" />-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Kelas"-->
+<!--                    android:layout_gravity="center_horizontal|bottom"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:fontFamily="@font/poppinsmedium" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical" >-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:layout_width="65dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    app:cardCornerRadius="100dp"-->
+<!--                    app:cardElevation="1dp"-->
+<!--                    app:cardBackgroundColor="@color/lightBlue">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="35dp"-->
+<!--                        android:layout_height="35dp"-->
+<!--                        android:src="@drawable/ic_report_white"-->
+<!--                        android:layout_gravity="center" />-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="SIAP"-->
+<!--                    android:layout_gravity="center_horizontal|bottom"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:fontFamily="@font/poppinsmedium" />-->
+
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical" >-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:layout_width="65dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    app:cardCornerRadius="100dp"-->
+<!--                    app:cardElevation="1dp"-->
+<!--                    app:cardBackgroundColor="@color/lightBlue">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="35dp"-->
+<!--                        android:layout_height="35dp"-->
+<!--                        android:src="@drawable/ic_event_white"-->
+<!--                        android:layout_gravity="center" />-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Event"-->
+<!--                    android:layout_gravity="center_horizontal|bottom"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:fontFamily="@font/poppinsmedium" />-->
+
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:orientation="vertical" >-->
+
+<!--                <com.google.android.material.card.MaterialCardView-->
+<!--                    android:layout_width="65dp"-->
+<!--                    android:layout_height="65dp"-->
+<!--                    android:layout_margin="8dp"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    app:cardCornerRadius="100dp"-->
+<!--                    app:cardElevation="1dp"-->
+<!--                    app:cardBackgroundColor="@color/GreenDark">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="35dp"-->
+<!--                        android:layout_height="35dp"-->
+<!--                        android:src="@drawable/ic_info_white"-->
+<!--                        android:layout_gravity="center" />-->
+
+<!--                </com.google.android.material.card.MaterialCardView>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Info"-->
+<!--                    android:layout_gravity="center_horizontal|bottom"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:fontFamily="@font/poppinsmedium" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/text_menu"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="28dp"-->
+<!--            android:fontFamily="@font/poppinsbold"-->
+<!--            android:text="Today Courses"-->
+<!--            android:textSize="24sp"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/layout_profile"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/layout_profile" />-->
+
+        <TextView
+            android:id="@+id/text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Today Courses"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/layout_profile"
+            app:layout_constraintTop_toBottomOf="@+id/layout_profile" />
+
+        <TextView
+            android:id="@+id/tv_faculty_usertype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="FTI UNSAP - Students"
+            android:textColor="@android:color/darker_gray"
+            app:layout_constraintStart_toStartOf="@+id/text_menu"
+            app:layout_constraintTop_toBottomOf="@+id/text_menu" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_courses"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_faculty_usertype"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_row_courses" />
+
+        <TextView
+            android:id="@+id/text_notfound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:text="Hari ini tidak ada kelas"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/tv_faculty_usertype"
+            app:layout_constraintTop_toBottomOf="@+id/tv_faculty_usertype" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_faculty_usertype" />
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/tv_faculty_usertype">-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/card_item_presence"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="4dp"-->
+<!--                android:layout_marginVertical="10dp"-->
+<!--                app:cardCornerRadius="10dp"-->
+<!--                app:cardElevation="2dp"-->
+<!--                app:checkedIcon="@drawable/ic_baseline_school_24">-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txt_matkul"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/poppinssemibold"-->
+<!--                        android:text="Digital Startup - A"-->
+<!--                        android:textSize="18sp"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txt_kode_matkul"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/poppinssemibold"-->
+<!--                        android:text="D3000"-->
+<!--                        android:textColor="@android:color/darker_gray"-->
+<!--                        app:layout_constraintStart_toStartOf="@+id/txt_matkul"-->
+<!--                        app:layout_constraintTop_toBottomOf="@+id/txt_matkul" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/txt_sks"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:fontFamily="@font/poppinssemibold"-->
+<!--                        android:text="3 SKS"-->
+<!--                        android:textColor="@android:color/darker_gray"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/txt_kode_matkul"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/txt_kode_matkul"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/txt_kode_matkul" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:fontFamily="@font/poppinssemibold"-->
+<!--                        android:text="Rabu"-->
+<!--                        android:textColor="@android:color/darker_gray"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@+id/txt_sks"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/txt_sks"-->
+<!--                        app:layout_constraintTop_toTopOf="@+id/txt_sks" />-->
+
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--            </com.google.android.material.card.MaterialCardView>-->
+
+<!--        </LinearLayout>-->
+
+
+        <!--    <FrameLayout-->
+        <!--        android:id="@+id/layout_btn_press"-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginTop="32dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="@+id/layout_profile"-->
+        <!--        app:layout_constraintStart_toStartOf="@+id/layout_profile"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/layout_profile">-->
+
+        <!--        <View-->
+        <!--            android:layout_width="300dp"-->
+        <!--            android:layout_height="300dp"-->
+        <!--            android:background="@drawable/bg_press_button" />-->
+
+        <!--        <View-->
+        <!--            android:layout_width="250dp"-->
+        <!--            android:layout_height="250dp"-->
+        <!--            android:background="@drawable/bg_press_button"-->
+        <!--            android:backgroundTint="#D5B3FF"-->
+        <!--            android:layout_gravity="center"/>-->
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:layout_width="200dp"-->
+        <!--            android:layout_height="200dp"-->
+        <!--            android:background="@drawable/bg_press_button"-->
+        <!--            app:backgroundTint="#B476FF"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:text="@string/present"-->
+        <!--            android:textSize="28sp"-->
+        <!--            android:fontFamily="@font/poppinsmedium"/>-->
+
+        <!--    </FrameLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

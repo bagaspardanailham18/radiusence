@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Radiusence</string>
+    <string name="access_token" translatable="false">sk.eyJ1IjoiYmFnYXNwYXJkYW5haWxoYW0iLCJhIjoiY2w1Z3BmZ2xlMDFtbjNjcXpweDRkZ242dCJ9.RHinQMNpaI41oxZKu7hI5g</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_profile">Profile</string>
+    <string name="attendance">Attendance</string>
+    <string name="elearning">EPresence</string>
+    <string name="present">Present</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_info">Attendance can only be done \nwithin a radius of %1$s meters in \nthe classroom area !!</string>
+    <string name="text_welcome">Prototype aplikasi ini dibuat untuk menguji implementasi Algoritma Haversine pada sistem presensi online untuk membatasi jarak presensi</string>
+
+    <string name="dialog_success_title">Success</string>
+    <string name="dialog_success_message">Anda melakukan presensi didalam radius yang ditentukan, data kehadiran anda berhasil direkap</string>
+    <string name="dialog_failed_title">Denied</string>
+    <string name="dialog_failed_message">You are outside the specified radius!</string>
+
+    <string name="tv_faculty_usertype">%1$s - %2$s</string>
+</resources>

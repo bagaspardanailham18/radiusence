@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.bagas.radiusence.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_presenceFormActivity"
+            app:destination="@id/presenceFormActivity" />
+        <action
+            android:id="@+id/action_navigation_home_to_classActivity"
+            app:destination="@id/classActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.bagas.radiusence.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.bagas.radiusence.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+    <activity
+        android:id="@+id/presenceFormActivity"
+        android:name="com.bagas.radiusence.ui.home.PresenceFormActivity"
+        android:label="activity_presence_form"
+        tools:layout="@layout/activity_presence_form" >
+        <argument
+            android:name="latitude"
+            app:argType="string"
+            android:defaultValue="default latitude" />
+        <argument
+            android:name="longitude"
+            app:argType="string"
+            android:defaultValue="default longitude" />
+        <argument
+            android:name="location"
+            app:argType="string"
+            android:defaultValue="default location" />
+        <argument
+            android:name="radiuspresence"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </activity>
+    <activity
+        android:id="@+id/classActivity"
+        android:name="com.bagas.radiusence.ui.home.ClassActivity"
+        android:label="activity_class"
+        tools:layout="@layout/activity_class" />
+
+</navigation>
